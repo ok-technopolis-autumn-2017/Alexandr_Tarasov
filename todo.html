@@ -40,9 +40,8 @@
           HTML
         </textarea>
           <button class="todo-item_close" aria-label="Delete todo">
-          <img
-          alt="Close"
-          src="https://raw.githubusercontent.com/ok-technopolis-autumn-2017/todo-app-design/master/icons/close%402x.png">
+            <div class="todo-item_close_icon">
+            </div>
         </button>
         </div>
 
@@ -53,9 +52,9 @@
           3 items left
         </div>
         <div class="todo-bottom_items-filter" aria-label="Todo filters">
-          <a href="#" aria-label="Filter: All" role="button">All</a>
-          <a href="#" aria-label="Filter: Active" role="button">Active</a>
-          <a href="#" aria-label="Filter: Completed" role="button">Completed</a>
+          <a href="#" class="todo-bottom_items-filter_all" aria-label="Filter: All">All</a>
+          <a href="#" class="todo-bottom_items-filter_active" aria-label="Filter: Active">Active</a>
+          <a href="#" class="todo-bottom_items-filter_completed" aria-label="Filter: Completed">Completed</a>
         </div>
         <button class="todo-bottom_clear-completed">Clear completed</button>
       </div>
