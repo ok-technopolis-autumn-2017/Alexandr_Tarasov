@@ -1,0 +1,44 @@
+.todo-add {
+  position: relative;
+}
+  .todo-add::after {
+    content: '';
+    display: block;
+    clear: both;
+  }
+  .todo-add_select-all {
+    width: 64px;
+    height: 64px;
+    position: relative;
+    border: 0;
+    float: left;
+    background: rgba(255, 255, 255, 1);
+          outline: none;
+  }
+  .todo-add_select-all:focus {
+      background: #f9f9f9;
+    }
+    .todo-add_select-all_icon {
+      background: url('../../img/icons/select-all.png') no-repeat 0 0;
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      width: 24px;
+      height: 12px;
+      margin: -6px -12px;
+    }
+  .todo-add_input {
+    position: absolute;
+    width: calc(100% - 70px);
+    margin-top: 14px;
+    margin-left: 1px;
+    border: 0;
+    font-size: 24px;
+    color: rgba(102, 102, 102, 1);
+    outline: none;
+  }
+    .todo-add_input::placeholder  {
+      font-size: 24px;
+      color: rgba(204, 204, 204, 1);
+      font-style: italic;
+    }
