@@ -1,59 +1,65 @@
 <!DOCTYPE html>
+
 <html lang="en">
+
 <head aria-label="todos">
   <meta charset="utf-8">
   <title>todos</title>
+  <link rel="stylesheet" href="./styles/default.css" />
 </head>
+
 <body>
-  <div class="todos-header">
-    <h1 class="todos-tittle" role="banner" aria-label="todo">todos</h1>
-  </div>
-  <div class="todo-frame" role="main">
-    <div class="todo-title">
-      <button class="todo-frame_todo-title_select-all" aria-label="Complete all">
-        <img
-        alt="Complete all"
-        src="https://raw.githubusercontent.com/ok-technopolis-autumn-2017/todo-app-design/master/icons/select-all%402x.png">
-      </button>
-      <input class="todo-title_input" placeholder="What needs to be done?"
-      aria-label="Input field for new todo">
+  <div class="todo-main-wrapper">
+    <div class="todo-header">
+      <h1 class="todo-title">todos</h1>
     </div>
-    <div class="todo-items">
-      <div class="todo-item __ready" aria-label="HTML">
-        <input class=“todo-item_ready-mark” type="checkbox"
-         checked="checked" aria-label="Check it" />
-        <textarea class="todo-item_text">
+    <div class="todo-container">
+      <div class="todo-add">
+        <button class="todo-add_select-all" aria-label="Complete all">
+          <div class="todo-add_select-all_icon">
+          </div>
+        </button>
+        <input class="todo-add_input" placeholder="What needs to be done?" aria-label="Input field for new todo">
+      </div>
+
+      <div class="todo-items">
+        <div class="todo-item" aria-label="HTML">
+          <input class=“todo-item_ready-mark” type="checkbox" aria-label="Check it" />
+          <textarea class="todo-item_text">
+            CSS
+          </textarea>
+          <button class="todo-item_close" aria-label="Delete todo">
+            <div class="todo-item_close_icon">
+            </div>
+          </button>
+        </div>
+
+        <div class="todo-item __ready" aria-label="HTML">
+          <input class=“todo-item_ready-mark” type="checkbox" checked="checked" aria-label="Check it" />
+          <textarea class="todo-item_text">
           HTML
         </textarea>
-        <button class="todo-item_close" aria-label="Delete todo">
-          <img
-          alt="Close"
-          src="https://raw.githubusercontent.com/ok-technopolis-autumn-2017/todo-app-design/master/icons/close%402x.png">
+          <button class="todo-item_close" aria-label="Delete todo">
+            <div class="todo-item_close_icon">
+            </div>
         </button>
+        </div>
+
       </div>
-      <div class="todo-item __not-ready" aria-label="HTML">
-        <input class=“todo-item_ready-mark” type="checkbox" aria-label="Check it" />
-        <textarea class="todo-item_text">
-          CSS
-        </textarea>
-        <button class="todo-item_close" aria-label="Delete todo">
-          <img
-          alt="Close"
-          src="https://raw.githubusercontent.com/ok-technopolis-autumn-2017/todo-app-design/master/icons/close%402x.png">
-        </button>
+
+      <div class="todo-bottom">
+        <div class="todo-bottom_left-items" aria-label="Left items">
+          3 items left
+        </div>
+        <div class="todo-bottom_items-filter" aria-label="Todo filters">
+          <a href="#" class="todo-bottom_items-filter_all" aria-label="Filter: All">All</a>
+          <a href="#" class="todo-bottom_items-filter_active" aria-label="Filter: Active">Active</a>
+          <a href="#" class="todo-bottom_items-filter_completed" aria-label="Filter: Completed">Completed</a>
+        </div>
+        <button class="todo-bottom_clear-completed">Clear completed</button>
       </div>
-    </div>
-    <div class="todo-bottom">
-      <div class="todo-bottom_left-items" aria-label="Left items">
-        3 items left
-      </div>
-      <div class="todo-bottom_items-filter" aria-label="Todo filters">
-        <a href="#" aria-label="Filter: All" role="button">All</a>
-        <a href="#" aria-label="Filter: Active" role="button">Active</a>
-        <a href="#" aria-label="Filter: Completed" role="button">Completed</a>
-      </div>
-      <button class="todo-bottom_clear-completed">Clear completed</button>
     </div>
   </div>
 </body>
+
 </html>
