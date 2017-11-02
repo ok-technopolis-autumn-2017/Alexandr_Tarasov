@@ -19,30 +19,38 @@
           <div class="todo-add_select-all_icon">
           </div>
         </button>
-        <input class="todo-add_input" placeholder="What needs to be done?" aria-label="Input field for new todo">
+        <div class="todo-add_input-w">
+          <input class="todo-add_input" placeholder="What needs to be done?" aria-label="Input field for new todo">
+        </div>
       </div>
 
       <div class="todo-items">
         <div class="todo-item" aria-label="HTML">
-          <input class=“todo-item_ready-mark” type="checkbox" aria-label="Check it" />
-          <textarea class="todo-item_text">
-            CSS
-          </textarea>
           <button class="todo-item_close" aria-label="Delete todo">
             <div class="todo-item_close_icon">
             </div>
           </button>
+          <input class="todo-item_ready-mark" type="checkbox"
+           aria-label="Check it" id = "todo-item_ready-mark_1"/>
+          <label for="todo-item_ready-mark_1">
+            <div class="todo-item_text-w">
+              <textarea class="todo-item_text" readonly>CSS</textarea>
+            </div>
+          </label>
         </div>
 
         <div class="todo-item __ready" aria-label="HTML">
-          <input class=“todo-item_ready-mark” type="checkbox" checked="checked" aria-label="Check it" />
-          <textarea class="todo-item_text">
-            HTML
-          </textarea>
           <button class="todo-item_close" aria-label="Delete todo">
-            <div class="todo-item_close_icon">
+           <div class="todo-item_close_icon">
+           </div>
+         </button>
+         <input class="todo-item_ready-mark" type="checkbox" checked="checked"
+          aria-label="Check it" id = "todo-item_ready-mark_2"/>
+          <label for="todo-item_ready-mark_2">
+            <div class=todo-item_text-w>
+              <textarea class="todo-item_text" readonly>HTML</textarea>
             </div>
-          </button>
+          </label>
         </div>
 
       </div>

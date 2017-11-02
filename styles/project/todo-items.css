@@ -1,10 +1,69 @@
 .todo-items {
-
+  position: relative;
 }
   .todo-item{
-
+    height: 60px;
+    border-top: 1px solid #e5e5e5;
   }
-    .todo-item.__ready{
-      
+      .todo-item:active .todo-item_close {
+        visibility: visible;
+      }
+    .todo-item_ready-mark{
+      display: none;
     }
-    .todo-item_
+      .todo-item_ready-mark + label::before {
+        content: '';
+        display: inline-block;
+        float: left;
+        margin-top: 13px;
+        margin-left: 12px;
+        margin-right: 12px;
+        width: 36px;
+        height: 36px;
+        display:inline;
+        cursor: pointer;
+        border-radius: 18px;
+        border: 1px solid #e5e5e5;
+      }
+        .todo-item_ready-mark:checked + label::before{
+          border: 1px solid #5dc1af;
+          background: url('../../img/icons/completed.png') no-repeat center center;
+        }
+          .todo-item_ready-mark:checked +label .todo-item_text {
+            text-decoration:line-through;
+            color: rgb(204,204,204);
+          }
+    .todo-item_text-w {
+      overflow: hidden;
+    }
+      .todo-item_text {
+        overflow: hidden;
+        outline: none;
+        width: 100%;
+        resize: none;
+        line-height: 30px;
+        background: none;
+        margin-top: 14px;
+        font-size: 24px;
+        color: rgba(102, 102, 102 , 1);
+        height: 30px;
+        border: 0;
+      }
+    .todo-item_close {
+      float: right;
+      position: relative;
+      width: 42px;
+      height: 60px;
+      border: 0;
+      background: #fff;
+      outline: none;
+    }
+      .todo-item_close_icon {
+        background: url('../../img/icons/close.png') no-repeat 0 0;
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        width: 18px;
+        height: 18px;
+        margin: -9px -9px;
+      }
