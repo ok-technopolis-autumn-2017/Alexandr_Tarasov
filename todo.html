@@ -26,31 +26,31 @@
 
       <div class="todo-items">
         <div class="todo-item" aria-label="HTML">
+          <div class="todo-item_ready-mark-w">
+            <input class="todo-item_ready-mark" type="checkbox" aria-label="Check it"/>
+            <div class="todo-item_ready-mark-icon"></div>
+          </div>
           <button class="todo-item_close" aria-label="Delete todo">
             <div class="todo-item_close_icon">
             </div>
           </button>
-          <input class="todo-item_ready-mark" type="checkbox"
-           aria-label="Check it" id = "todo-item_ready-mark_1"/>
-          <label for="todo-item_ready-mark_1">
-            <div class="todo-item_text-w">
-              <textarea class="todo-item_text" readonly>CSS</textarea>
-            </div>
-          </label>
+          <div class="todo-item_text" contenteditable="true">
+            CSS
+          </div>
         </div>
 
         <div class="todo-item __ready" aria-label="HTML">
+          <div class="todo-item_ready-mark-w">
+            <input class="todo-item_ready-mark" type="checkbox" checked aria-label="Check it"/>
+            <div class="todo-item_ready-mark-icon"></div>
+          </div>
           <button class="todo-item_close" aria-label="Delete todo">
            <div class="todo-item_close_icon">
            </div>
-         </button>
-         <input class="todo-item_ready-mark" type="checkbox" checked="checked"
-          aria-label="Check it" id = "todo-item_ready-mark_2"/>
-          <label for="todo-item_ready-mark_2">
-            <div class=todo-item_text-w>
-              <textarea class="todo-item_text" readonly>HTML</textarea>
-            </div>
-          </label>
+          </button>
+          <div class="todo-item_text" contenteditable="true">
+            HTML
+          </div>
         </div>
 
       </div>
@@ -59,10 +59,10 @@
         <div class="todo-bottom_left-items" aria-label="Left items">
           3 items left
         </div>
-        <div class="todo-bottom_items-filter" aria-label="Todo filters">
-          <a href="#" class="todo-bottom_items-filter_all" aria-label="Filter: All">All</a>
-          <a href="#" class="todo-bottom_items-filter_active" aria-label="Filter: Active">Active</a>
-          <a href="#" class="todo-bottom_items-filter_completed" aria-label="Filter: Completed">Completed</a>
+        <div class="todo-bottom_items-filters" aria-label="Todo filters">
+          <button class="todo-bottom_items-filter" aria-label="Filter: All">All</button>
+          <button class="todo-bottom_items-filter __active" aria-label="Filter: Active">Active</button>
+          <button class="todo-bottom_items-filter" aria-label="Filter: Completed">Completed</button>
         </div>
         <button class="todo-bottom_clear-completed">Clear completed</button>
       </div>

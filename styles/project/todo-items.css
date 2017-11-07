@@ -1,62 +1,74 @@
 .todo-items {
   position: relative;
+  padding-bottom: 40px;
 }
+ .todo-items::after {
+   content: '';
+   border-bottom: 1px solid #e5e5e5;
+   background: none;
+   position: absolute;
+   bottom: 40px;
+   width: 100%;
+ }
   .todo-item{
-    height: 60px;
+    cursor: pointer;
+    position: relative;
+    min-height: 64px;
     border-top: 1px solid #e5e5e5;
+    overflow: hidden;
+    display: flex;
   }
-      .todo-item:active .todo-item_close {
+    .todo-item:hover {
+      background: #f9f9f9;
+    }
+      .todo-item:hover .todo-item_close {
         visibility: visible;
       }
-    .todo-item_ready-mark{
-      display: none;
+    .todo-item_ready-mark-w{
+      float: left;
+      align-self: center;
+      order: 1;
+      position: relative;
+      width: 60px;
+      height: 60px;
     }
-      .todo-item_ready-mark + label::before {
-        content: '';
-        display: inline-block;
-        float: left;
-        margin-top: 13px;
-        margin-left: 12px;
-        margin-right: 12px;
+      .todo-item_ready-mark {
+        cursor: pointer;
+        position: absolute;
+        opacity: 0;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        z-index: 1;
+      }
+      .todo-item_ready-mark-icon {
+        position: absolute;
+        top:50%;
+        left: 50%;
+        margin: -18px -18px;
         width: 36px;
         height: 36px;
-        display:inline;
-        cursor: pointer;
-        border-radius: 18px;
+        border-radius: 50%;
         border: 1px solid #e5e5e5;
       }
-        .todo-item_ready-mark:checked + label::before{
+        .todo-item ~ .__ready .todo-item_ready-mark-icon {
           border: 1px solid #5dc1af;
           background: url('../../img/icons/completed.png') no-repeat center center;
         }
-          .todo-item_ready-mark:checked +label .todo-item_text {
-            text-decoration:line-through;
-            color: rgb(204,204,204);
-          }
-    .todo-item_text-w {
-      overflow: hidden;
-    }
-      .todo-item_text {
-        overflow: hidden;
-        outline: none;
-        width: 100%;
-        resize: none;
-        line-height: 30px;
-        background: none;
-        margin-top: 14px;
-        font-size: 24px;
-        color: rgba(102, 102, 102 , 1);
-        height: 30px;
-        border: 0;
-      }
     .todo-item_close {
+      cursor: pointer;
+      visibility: hidden;
       float: right;
+      align-self: flex-end;
+      order: 3;
       position: relative;
       width: 42px;
       height: 60px;
       border: 0;
-      background: #fff;
+      background: none;
       outline: none;
+      display: inline;
     }
       .todo-item_close_icon {
         background: url('../../img/icons/close.png') no-repeat 0 0;
@@ -66,4 +78,17 @@
         width: 18px;
         height: 18px;
         margin: -9px -9px;
+      }
+    .todo-item_text {
+      align-self: center;
+      order: 2;
+      width: 100%;
+      overflow: hidden;
+      font-size: 24px;
+      color: rgba(102, 102, 102 , 1);
+      outline: none;
+    }
+      .todo-item ~ .__ready .todo-item_text {
+        text-decoration: line-through;
+        color: rgba(204, 204, 204, 1);
       }
