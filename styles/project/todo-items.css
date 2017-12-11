@@ -7,13 +7,12 @@
    border-bottom: 1px solid #e5e5e5;
    background: none;
    position: absolute;
-   bottom: 40px;
    width: 100%;
  }
   .todo-item{
     cursor: pointer;
     position: relative;
-    min-height: 64px;
+    min-height: 60px;
     border-top: 1px solid #e5e5e5;
     overflow: hidden;
     display: flex;

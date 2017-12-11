@@ -1,7 +1,8 @@
 body, h1 {
   font-family: "Helvetica Neue", "Helvetica", Arial, sans-serif;
   font-size: 14px;
-  background: rgba(204, 204, 204, 1);
+  /*background: rgba(204, 204, 204, 1);*/
+  background: #f5f5f5;
 }
 .todo-main-wrapper {
     min-width: 280px;
