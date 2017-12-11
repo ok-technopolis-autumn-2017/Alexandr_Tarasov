@@ -1,0 +1,25 @@
+{
+  "name": "preprocessor-stub",
+  "version": "0.0.1",
+  "description": "Stub for setting up preprocessor",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "gulp build",
+    "watch": "gulp watch",
+    "start": "gulp"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:ok-technopolis/preprocessor-stub.git"
+  },
+  "author": "",
+  "license": "MIT",
+  "devDependencies": {
+    "gulp": "^3.9.1",
+    "gulp-clean": "^0.3.2",
+    "gulp-css-rebase-urls": "0.0.5",
+    "gulp-sass": "^3.1.0",
+    "gulp-sourcemaps": "^2.5.1"
+  }
+}

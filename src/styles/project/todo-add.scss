@@ -1,0 +1,46 @@
+@import "./../config/globals.scss";
+
+.todo-add {
+  position: relative;
+  @include clearfix();
+}
+  .todo-add_select-all {
+    cursor: pointer;
+    width: $w_todo-add_select-all;
+    height: $h_todo-add_select-all;
+    position: relative;
+    float: left;
+    background: $c-white;
+    outline: none;
+    border: 0;
+    &:focus {
+        background: $c-grey-white;
+      }
+  }
+    .todo-add_select-all_icon {
+      background: url('./../../images/icons/select-all.png') no-repeat 0 0;
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      width: $w_todo-add_select-all_icon;
+      height: $h_todo-add_select-all_icon;
+      margin: (-($offset + $offset_half)) (-($offset_3x));
+    }
+  .todo-add_input-w {
+    overflow: hidden;
+  }
+    .todo-add_input {
+      box-sizing: border-box;
+      width: 100%;
+      margin-top: ($offset_4x + $offset_half);
+      padding-right: $offset_3x;
+      font-size: $fs_xx-large;
+      color: $c-grey-dark;
+      outline: none;
+      border: 0;
+      &::placeholder  {
+        font-size: $fs_xx-large;
+        color: $c-grey;
+        font-style: italic;
+      }
+    }
