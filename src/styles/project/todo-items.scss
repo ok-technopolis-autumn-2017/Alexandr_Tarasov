@@ -2,7 +2,7 @@
 
 .todo-items {
   position: relative;
-  padding-bottom: $$pb_todo-items;
+  padding-bottom: $pb_todo-items;
   &::after {
     content: '';
     border-bottom: $bt_todo-items solid $c-grey-item-border;
@@ -24,6 +24,20 @@
       &:hover .todo-item_close {
         visibility: visible;
       }
+
+    &.__hide {
+      display: none;
+    }
+
+    &.__ready .todo-item_text {
+      text-decoration: line-through;
+      color: $c-grey;
+    }
+
+    &.__ready .todo-item_ready-mark-icon {
+      border: $b_todo-item-ready-mark-icon solid $c-green-success;
+      background: url('../../images/icons/completed.png') no-repeat center center;
+    }
   }
     .todo-item_ready-mark-w{
       float: left;
@@ -53,10 +67,6 @@
         border-radius: 50%;
         border: $b_todo-item-ready-mark-icon solid $c-grey-item-border;
       }
-        .todo-item ~ .__ready .todo-item_ready-mark-icon {
-          border: $b_todo-item-ready-mark-icon solid $c-green-success;
-          background: url('../../images/icons/completed.png') no-repeat center center;
-        }
     .todo-item_close {
       cursor: pointer;
       visibility: hidden;
@@ -64,8 +74,8 @@
       align-self: flex-end;
       order: 3;
       position: relative;
-      $w_todo-item_close: 42px;
-      $h_todo-item_close: 60px;
+      height: $h_todo-item_close;
+      width: $w_todo-item_close;
       border: 0;
       background: none;
       outline: none;
@@ -79,6 +89,7 @@
         width: $w_todo-item_close-icon;
         height: $h_todo-item_close-icon;
         margin: (-$offset_2x - 1) (-$offset_2x - 1);
+        pointer-events: none;
       }
     .todo-item_text {
       align-self: center;
@@ -89,7 +100,3 @@
       color: $c-grey-dark;
       outline: none;
     }
-      .todo-item ~ .__ready .todo-item_text {
-        text-decoration: line-through;
-        color: $c-grey-dark;
-      }

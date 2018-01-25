@@ -136,13 +136,35 @@ h1 {
   right: 4px;
 }
 
+.todo-container.__empty {
+  min-height: 0;
+}
+
+.todo-container.__empty::before,
+.todo-container.__empty::after {
+  height: 0;
+}
+
+.todo-container.__empty .todo-bottom,
+.todo-container.__empty .todo-items {
+  display: none;
+}
+
+.todo-container.__empty .todo-add_select-all {
+  visibility: hidden;
+}
+
 .todo-add {
   position: relative;
 }
 
-.todo-add::after {
+.todo-add:before,
+.todo-add:after {
   content: '';
-  display: block;
+  display: table;
+}
+
+.todo-add:after {
   clear: both;
 }
 
@@ -222,6 +244,20 @@ h1 {
   visibility: visible;
 }
 
+.todo-item.__hide {
+  display: none;
+}
+
+.todo-item.__ready .todo-item_text {
+  text-decoration: line-through;
+  color: #cccccc;
+}
+
+.todo-item.__ready .todo-item_ready-mark-icon {
+  border: 1px solid #5dc1af;
+  background: url("images/icons/completed.png") no-repeat center center;
+}
+
 .todo-item_ready-mark-w {
   float: left;
   align-self: center;
@@ -253,11 +289,6 @@ h1 {
   border: 1px solid #e5e5e5;
 }
 
-.todo-item ~ .__ready .todo-item_ready-mark-icon {
-  border: 1px solid #5dc1af;
-  background: url("images/icons/completed.png") no-repeat center center;
-}
-
 .todo-item_close {
   cursor: pointer;
   visibility: hidden;
@@ -265,8 +296,8 @@ h1 {
   align-self: flex-end;
   order: 3;
   position: relative;
-  width: 42px;
   height: 60px;
+  width: 42px;
   border: 0;
   background: none;
   outline: none;
@@ -281,6 +312,7 @@ h1 {
   width: 18px;
   height: 18px;
   margin: -9px -9px;
+  pointer-events: none;
 }
 
 .todo-item_text {
@@ -291,11 +323,6 @@ h1 {
   font-size: 24px;
   color: #666666;
   outline: none;
-}
-
-.todo-item ~ .__ready .todo-item_text {
-  text-decoration: line-through;
-  color: #cccccc;
 }
 
 .todo-bottom {
@@ -332,7 +359,7 @@ h1 {
   background: none;
 }
 
-.todo-bottom_items-filter ~ .__active {
+.todo-bottom_items-filter.__active {
   border-radius: 2px;
   border: 1px solid #ebdfdf;
 }
@@ -347,6 +374,10 @@ h1 {
   font-size: 14px;
   color: #888888;
   outline: none;
+}
+
+.todo-bottom_clear-completed.__hide {
+  visibility: hidden;
 }
 
 .todo-bottom_clear-completed:focus {

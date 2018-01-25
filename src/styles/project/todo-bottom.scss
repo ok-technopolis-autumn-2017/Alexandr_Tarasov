@@ -29,10 +29,10 @@
       color: $c-grey-filter-font;
       border: 0;
       background: none;
-    }
-    .todo-bottom_items-filter ~.__active {
-      border-radius: $br_todo-bottom_items-filter;
-      border: $b_todo-bottom_items-filter solid $c-grey-filter-border;
+      &.__active {
+        border-radius: $br_todo-bottom_items-filter;
+        border: $b_todo-bottom_items-filter solid $c-grey-filter-border;
+      }
     }
   .todo-bottom_clear-completed {
     cursor: pointer;
@@ -44,6 +44,10 @@
     font-size: $fs_little;
     color: $c-grey-filter-font;
     outline: none;
+
+    &.__hide {
+      visibility: hidden;
+    }
   }
     .todo-bottom_clear-completed:focus {
       background: $c-grey-white;

@@ -3,71 +3,57 @@
 <html lang="en">
 
 <head aria-label="todos">
-  <meta charset="utf-8">
-  <title>todos</title>
-  <link rel="stylesheet" href="./dist/default.css" />
+    <meta charset="utf-8">
+    <title>todos</title>
+    <link rel="stylesheet" href="./dist/default.css"/>
+    <script src="./dist/scripts/bundle.js"></script>
 </head>
 
-<body>
-  <div class="todo-main-wrapper">
-    <div class="todo-header">
-      <h1 class="todo-title">todos</h1>
-    </div>
-    <div class="todo-container">
-      <div class="todo-add">
-        <button class="todo-add_select-all" aria-label="Complete all">
-          <div class="todo-add_select-all_icon">
-          </div>
-        </button>
-        <div class="todo-add_input-w">
-          <input class="todo-add_input" placeholder="What needs to be done?" aria-label="Input field for new todo">
-        </div>
-      </div>
-
-      <div class="todo-items">
-        <div class="todo-item" aria-label="HTML">
-          <div class="todo-item_ready-mark-w">
+<script type="text/html" id="itemTemplate">
+    <div class="todo-item">
+        <div class="todo-item_ready-mark-w">
             <input class="todo-item_ready-mark" type="checkbox" aria-label="Check it"/>
             <div class="todo-item_ready-mark-icon"></div>
-          </div>
-          <button class="todo-item_close" aria-label="Delete todo">
-            <div class="todo-item_close_icon">
-            </div>
-          </button>
-          <div class="todo-item_text" contenteditable="true">
-            CSS
-          </div>
         </div>
-
-        <div class="todo-item __ready" aria-label="HTML">
-          <div class="todo-item_ready-mark-w">
-            <input class="todo-item_ready-mark" type="checkbox" checked aria-label="Check it"/>
-            <div class="todo-item_ready-mark-icon"></div>
-          </div>
-          <button class="todo-item_close" aria-label="Delete todo">
-           <div class="todo-item_close_icon">
-           </div>
-          </button>
-          <div class="todo-item_text" contenteditable="true">
-            HTML
-          </div>
-        </div>
-
-      </div>
-
-      <div class="todo-bottom">
-        <div class="todo-bottom_left-items" aria-label="Left items">
-          3 items left
-        </div>
-        <div class="todo-bottom_items-filters" aria-label="Todo filters">
-          <button class="todo-bottom_items-filter" aria-label="Filter: All">All</button>
-          <button class="todo-bottom_items-filter __active" aria-label="Filter: Active">Active</button>
-          <button class="todo-bottom_items-filter" aria-label="Filter: Completed">Completed</button>
-        </div>
-        <button class="todo-bottom_clear-completed">Clear completed</button>
-      </div>
+        <button class="todo-item_close" aria-label="Delete todo">
+            <div class="todo-item_close_icon"></div>
+        </button>
+        <div class="todo-item_text" contenteditable="true"></div>
     </div>
-  </div>
+</script>
+
+<body>
+<div class="todo-main-wrapper">
+    <div class="todo-header">
+        <h1 class="todo-title">todos</h1>
+    </div>
+    <div class="todo-container __empty">
+        <div class="todo-add">
+            <button class="todo-add_select-all" aria-label="Complete all">
+                <div class="todo-add_select-all_icon">
+                </div>
+            </button>
+            <div class="todo-add_input-w">
+                <input class="todo-add_input" placeholder="What needs to be done?"
+                       aria-label="Input field for new todo">
+            </div>
+        </div>
+
+        <div class="todo-items"></div>
+
+        <div class="todo-bottom">
+            <div class="todo-bottom_left-items" aria-label="Left items">
+                0 items left
+            </div>
+            <div class="todo-bottom_items-filters" aria-label="Todo filters">
+                <button class="todo-bottom_items-filter  __active" data-filter="all" aria-label="Filter: All">All</button>
+                <button class="todo-bottom_items-filter" data-filter="active" aria-label="Filter: Active">Active</button>
+                <button class="todo-bottom_items-filter" data-filter="completed" aria-label="Filter: Completed">Completed</button>
+            </div>
+            <button class="todo-bottom_clear-completed __hide">Clear completed</button>
+        </div>
+    </div>
+</div>
 </body>
 
 </html>

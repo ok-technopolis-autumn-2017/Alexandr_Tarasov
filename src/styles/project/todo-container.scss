@@ -25,4 +25,22 @@
     left: $s_todo-container-before;
     right: $s_todo-container-before;
   }
+
+  &.__empty {
+    min-height: 0;
+    &::before,
+    &::after {
+      height: 0;
+    }
+  }
+
+  &.__empty .todo-bottom,
+  &.__empty .todo-items{
+    display: none;
+  }
+
+  &.__empty .todo-add_select-all {
+    visibility: hidden;
+  }
+
 }
