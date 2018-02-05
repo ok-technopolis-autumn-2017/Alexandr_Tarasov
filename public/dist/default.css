@@ -145,7 +145,7 @@ h1 {
   height: 0;
 }
 
-.todo-container.__empty .todo-bottom,
+.todo-container.__empty .todo-actionbar,
 .todo-container.__empty .todo-items {
   display: none;
 }
@@ -325,7 +325,7 @@ h1 {
   outline: none;
 }
 
-.todo-bottom {
+.todo-actionbar {
   position: absolute;
   bottom: 0;
   width: 100%;
@@ -335,7 +335,7 @@ h1 {
   display: flex;
 }
 
-.todo-bottom_left-items {
+.todo-actionbar_left-items {
   float: left;
   align-self: center;
   font-size: 14px;
@@ -343,13 +343,13 @@ h1 {
   color: #888888;
 }
 
-.todo-bottom_items-filters {
+.todo-actionbar_items-filters {
   flex: 1;
   align-self: center;
   display: inline-block;
 }
 
-.todo-bottom_items-filter {
+.todo-actionbar_items-filter {
   cursor: pointer;
   padding-left: 12px;
   padding-right: 12px;
@@ -359,12 +359,12 @@ h1 {
   background: none;
 }
 
-.todo-bottom_items-filter.__active {
+.todo-actionbar_items-filter.__active {
   border-radius: 2px;
   border: 1px solid #ebdfdf;
 }
 
-.todo-bottom_clear-completed {
+.todo-actionbar_clear-completed {
   cursor: pointer;
   float: right;
   align-self: center;
@@ -376,11 +376,11 @@ h1 {
   outline: none;
 }
 
-.todo-bottom_clear-completed.__hide {
+.todo-actionbar_clear-completed.__hide {
   visibility: hidden;
 }
 
-.todo-bottom_clear-completed:focus {
+.todo-actionbar_clear-completed:focus {
   background: #f9f9f9;
 }
 /*# sourceMappingURL=default.css.map */

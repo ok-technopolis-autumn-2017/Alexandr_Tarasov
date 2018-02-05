@@ -2,10 +2,10 @@
 
 .todo-items {
   position: relative;
-  padding-bottom: $pb_todo-items;
+  padding-bottom: 40px;
   &::after {
     content: '';
-    border-bottom: $bt_todo-items solid $c-grey-item-border;
+    border-bottom: 1px solid $c-grey-item-border;
     background: none;
     position: absolute;
     width: 100%;
@@ -14,8 +14,8 @@
   .todo-item{
     cursor: pointer;
     position: relative;
-    min-height: $minh_todo-item;
-    border-top: $bt_todo-items solid $c-grey-item-border;
+    min-height: 60px;
+    border-top: 1px solid $c-grey-item-border;
     overflow: hidden;
     display: flex;
     &:hover {
@@ -35,7 +35,7 @@
     }
 
     &.__ready .todo-item_ready-mark-icon {
-      border: $b_todo-item-ready-mark-icon solid $c-green-success;
+      border: 1px solid $c-green-success;
       background: url('../../images/icons/completed.png') no-repeat center center;
     }
   }
@@ -44,8 +44,8 @@
       align-self: center;
       order: 1;
       position: relative;
-      width: $w_todo-item-ready-mark;
-      height: $h_todo-item-ready-mark;
+      width: 60px;
+      height: 60px;
     }
       .todo-item_ready-mark {
         cursor: pointer;
@@ -61,11 +61,11 @@
         position: absolute;
         top:50%;
         left: 50%;
-        margin: (-$offset_4x - $offset_half) (-$offset_4x - $offset_half);
+        margin: (-$h_todo-item-ready-mark-icon / 2) (-$w_todo-item-ready-mark-icon / 2);
         width: $w_todo-item-ready-mark-icon;
         height: $h_todo-item-ready-mark-icon;
         border-radius: 50%;
-        border: $b_todo-item-ready-mark-icon solid $c-grey-item-border;
+        border: 1px solid $c-grey-item-border;
       }
     .todo-item_close {
       cursor: pointer;
@@ -74,8 +74,8 @@
       align-self: flex-end;
       order: 3;
       position: relative;
-      height: $h_todo-item_close;
-      width: $w_todo-item_close;
+      height: 60px;
+      width: 42px;
       border: 0;
       background: none;
       outline: none;
@@ -88,7 +88,7 @@
         top: 50%;
         width: $w_todo-item_close-icon;
         height: $h_todo-item_close-icon;
-        margin: (-$offset_2x - 1) (-$offset_2x - 1);
+        margin: (-$h_todo-item_close-icon / 2) (-$w_todo-item_close-icon / 2);
         pointer-events: none;
       }
     .todo-item_text {

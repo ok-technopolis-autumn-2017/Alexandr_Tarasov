@@ -6,8 +6,8 @@
 }
   .todo-add_select-all {
     cursor: pointer;
-    width: $w_todo-add_select-all;
-    height: $h_todo-add_select-all;
+    width: 64px;
+    height: 64px;
     position: relative;
     float: left;
     background: $c-white;
@@ -24,7 +24,7 @@
       top: 50%;
       width: $w_todo-add_select-all_icon;
       height: $h_todo-add_select-all_icon;
-      margin: (-($offset + $offset_half)) (-($offset_3x));
+      margin: (-($h_todo-add_select-all_icon / 2)) (-($w_todo-add_select-all_icon / 2));
     }
   .todo-add_input-w {
     overflow: hidden;

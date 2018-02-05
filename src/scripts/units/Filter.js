@@ -8,7 +8,7 @@ const Eventable = require('../utils/Eventable');
 function Filter(root) {
     this._initEventable();
 
-    this._filters = root.querySelectorAll('.todo-bottom_items-filter');
+    this._filters = root.querySelectorAll('.todo-actionbar_items-filter');
     this._activeFilter = null;
 
     for (let i = 0; i < this._filters.length; i++) {

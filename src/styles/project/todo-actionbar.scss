@@ -1,46 +1,46 @@
 @import "./../config/globals.scss";
 
-.todo-bottom {
+.todo-actionbar {
   position: absolute;
   bottom: 0;
   width: 100%;
-  min-height: $minh_todo-bottom;
-  border-top: $bt_todo-items solid $c-grey-item-border;
+  min-height: 40px;
+  border-top: 1px solid $c-grey-item-border;
   text-align: center;
   display: flex;
 }
-  .todo-bottom_left-items {
+  .todo-actionbar_left-items {
     float: left;
     align-self: center;
     font-size: $fs_little;
-    padding-left: $p_todo-bottom_items;
+    padding-left: $p_todo-actionbar_items;
     color: $c-grey-filter-font;
   }
-  .todo-bottom_items-filters {
+  .todo-actionbar_items-filters {
     flex:1;
     align-self: center;
     display: inline-block;
   }
-    .todo-bottom_items-filter {
+    .todo-actionbar_items-filter {
       cursor: pointer;
-      padding-left: $p_todo-bottom_items;
-      padding-right: $p_todo-bottom_items;
+      padding-left: $p_todo-actionbar_items;
+      padding-right: $p_todo-actionbar_items;
       font-size: $fs_little;
       color: $c-grey-filter-font;
       border: 0;
       background: none;
       &.__active {
-        border-radius: $br_todo-bottom_items-filter;
-        border: $b_todo-bottom_items-filter solid $c-grey-filter-border;
+        border-radius: 2px;
+        border: 1px solid $c-grey-filter-border;
       }
     }
-  .todo-bottom_clear-completed {
+  .todo-actionbar_clear-completed {
     cursor: pointer;
     float: right;
     align-self: center;
     border: 0;
     background: none;
-    padding-right: $p_todo-bottom_items;
+    padding-right: $p_todo-actionbar_items;
     font-size: $fs_little;
     color: $c-grey-filter-font;
     outline: none;
@@ -49,6 +49,6 @@
       visibility: hidden;
     }
   }
-    .todo-bottom_clear-completed:focus {
+    .todo-actionbar_clear-completed:focus {
       background: $c-grey-white;
     }

@@ -12,7 +12,7 @@ function init() {
     const todosContainer = new TodosContainer(mainWrapper.querySelector('.todo-container'));
     const todoAddbar = new TodoAddbar(mainWrapper.querySelector('.todo-add'));
     const todosList = new TodosList(mainWrapper.querySelector('.todo-items'));
-    const todosActionbar = new TodosActionbar(mainWrapper.querySelector('.todo-bottom'));
+    const todosActionbar = new TodosActionbar(mainWrapper.querySelector('.todo-actionbar'));
     const todosListModel = new TodosListModel([]);
 
     viewState.onChange(function (data) {

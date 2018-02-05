@@ -2,7 +2,7 @@
 
 .todo-container {
   background: $c-white;
-  box-shadow: 0px $box-shadow1_todo-container $box-shadow1_todo-container rgba(0, 0, 0, 0.2);
+  box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.2);
   position: relative;
   display: block;
   min-height: $minh_todo-container;
@@ -10,20 +10,20 @@
   &::before {
     content: '';
     background: $c-white;
-    box-shadow: 0px $box-shadow1_todo-container $box-shadow1_todo-container rgba(0, 0, 0, 0.2);
+    box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.2);
     position: absolute;
     top:100%;
     z-index: -1;
   }
   &::after {
-    height: $h_todo-container-after;
-    left: $s_todo-container-after;
-    right: $s_todo-container-after;
+    height: 5px;
+    left: 2px;
+    right: 2px;
   }
   &::before {
-    height: $h_todo-container-before;
-    left: $s_todo-container-before;
-    right: $s_todo-container-before;
+    height: 10px;
+    left: 4px;
+    right: 4px;
   }
 
   &.__empty {
@@ -34,7 +34,7 @@
     }
   }
 
-  &.__empty .todo-bottom,
+  &.__empty .todo-actionbar,
   &.__empty .todo-items{
     display: none;
   }

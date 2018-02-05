@@ -194,7 +194,7 @@ function init() {
     const todosContainer = new TodosContainer(mainWrapper.querySelector('.todo-container'));
     const todoAddbar = new TodoAddbar(mainWrapper.querySelector('.todo-add'));
     const todosList = new TodosList(mainWrapper.querySelector('.todo-items'));
-    const todosActionbar = new TodosActionbar(mainWrapper.querySelector('.todo-bottom'));
+    const todosActionbar = new TodosActionbar(mainWrapper.querySelector('.todo-actionbar'));
     const todosListModel = new TodosListModel([]);
 
     viewState.onChange(function (data) {
@@ -919,9 +919,9 @@ function TodosActionbar(root) {
     this._initEventable();
 
     this._root = root;
-    this._counter = root.querySelector('.todo-bottom_left-items');
-    this._clearCompletedButton = root.querySelector('.todo-bottom_clear-completed');
-    this._filters = new Filter(root.querySelector('.todo-bottom_items-filters'));
+    this._counter = root.querySelector('.todo-actionbar_left-items');
+    this._clearCompletedButton = root.querySelector('.todo-actionbar_clear-completed');
+    this._filters = new Filter(root.querySelector('.todo-actionbar_items-filters'));
 
     this._filters.on('filterSpecified', this._onFilterSpecified, this);
 
@@ -993,7 +993,7 @@ const Eventable = __webpack_require__(1);
 function Filter(root) {
     this._initEventable();
 
-    this._filters = root.querySelectorAll('.todo-bottom_items-filter');
+    this._filters = root.querySelectorAll('.todo-actionbar_items-filter');
     this._activeFilter = null;
 
     for (let i = 0; i < this._filters.length; i++) {
