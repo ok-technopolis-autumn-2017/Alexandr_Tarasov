@@ -216,7 +216,7 @@ h1 {
 
 .todo-items {
   position: relative;
-  padding-bottom: 40px;
+  min-height: 300px;
 }
 
 .todo-items::after {
@@ -253,12 +253,12 @@ h1 {
   color: #cccccc;
 }
 
-.todo-item.__ready .todo-item_ready-mark-icon {
+.todo-item.__ready .input-checkbox_visual {
   border: 1px solid #5dc1af;
   background: url("images/icons/completed.png") no-repeat center center;
 }
 
-.todo-item_ready-mark-w {
+.todo-item_ready-mark {
   float: left;
   align-self: center;
   order: 1;
@@ -267,7 +267,7 @@ h1 {
   height: 60px;
 }
 
-.todo-item_ready-mark {
+.input-checkbox_target {
   cursor: pointer;
   position: absolute;
   opacity: 0;
@@ -278,7 +278,7 @@ h1 {
   z-index: 1;
 }
 
-.todo-item_ready-mark-icon {
+.input-checkbox_visual {
   position: absolute;
   top: 50%;
   left: 50%;
@@ -326,7 +326,6 @@ h1 {
 }
 
 .todo-actionbar {
-  position: absolute;
   bottom: 0;
   width: 100%;
   min-height: 40px;
@@ -343,13 +342,13 @@ h1 {
   color: #888888;
 }
 
-.todo-actionbar_items-filters {
+.filter-button {
   flex: 1;
   align-self: center;
   display: inline-block;
 }
 
-.todo-actionbar_items-filter {
+.filter-button_item {
   cursor: pointer;
   padding-left: 12px;
   padding-right: 12px;
@@ -359,7 +358,7 @@ h1 {
   background: none;
 }
 
-.todo-actionbar_items-filter.__active {
+.filter-button_item.__active {
   border-radius: 2px;
   border: 1px solid #ebdfdf;
 }

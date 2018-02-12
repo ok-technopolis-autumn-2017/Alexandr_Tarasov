@@ -11,9 +11,9 @@
 
 <script type="text/html" id="itemTemplate">
     <div class="todo-item">
-        <div class="todo-item_ready-mark-w">
-            <input class="todo-item_ready-mark" type="checkbox" aria-label="Check it"/>
-            <div class="todo-item_ready-mark-icon"></div>
+        <div class="input-checkbox todo-item_ready-mark">
+            <input class="input-checkbox_target" type="checkbox" aria-label="Check it"/>
+            <div class="input-checkbox_visual"></div>
         </div>
         <button class="todo-item_close" aria-label="Delete todo">
             <div class="todo-item_close_icon"></div>
@@ -45,10 +45,10 @@
             <div class="todo-actionbar_left-items" aria-label="Left items">
                 0 items left
             </div>
-            <div class="todo-actionbar_items-filters" aria-label="Todo filters">
-                <button class="todo-actionbar_items-filter  __active" data-filter="all" aria-label="Filter: All">All</button>
-                <button class="todo-actionbar_items-filter" data-filter="active" aria-label="Filter: Active">Active</button>
-                <button class="todo-actionbar_items-filter" data-filter="completed" aria-label="Filter: Completed">Completed</button>
+            <div class="filter-button todo-actionbar_items-filters" aria-label="Todo filters">
+                <button class="filter-button_item  __active" data-filter="all" aria-label="Filter: All">All</button>
+                <button class="filter-button_item" data-filter="active" aria-label="Filter: Active">Active</button>
+                <button class="filter-button_item" data-filter="completed" aria-label="Filter: Completed">Completed</button>
             </div>
             <button class="todo-actionbar_clear-completed __hide">Clear completed</button>
         </div>

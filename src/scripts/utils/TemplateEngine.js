@@ -13,7 +13,7 @@ function getTemplateRootNode(scriptId) {
 let templateEngine = {
     todoItem: function (data) {
         let root = getTemplateRootNode('itemTemplate');
-        let readyMark = root.querySelector('.todo-item_ready-mark');
+        let readyMark = root.querySelector('.input-checkbox_target');
         let remove = root.querySelector('.todo-item_close');
         let text = root.querySelector('.todo-item_text');
 

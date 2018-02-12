@@ -2,7 +2,7 @@
 
 .todo-items {
   position: relative;
-  padding-bottom: 40px;
+  min-height: 300px;
   &::after {
     content: '';
     border-bottom: 1px solid $c-grey-item-border;
@@ -34,12 +34,12 @@
       color: $c-grey;
     }
 
-    &.__ready .todo-item_ready-mark-icon {
+    &.__ready .input-checkbox_visual {
       border: 1px solid $c-green-success;
       background: url('../../images/icons/completed.png') no-repeat center center;
     }
   }
-    .todo-item_ready-mark-w{
+    .todo-item_ready-mark{
       float: left;
       align-self: center;
       order: 1;
@@ -47,7 +47,7 @@
       width: 60px;
       height: 60px;
     }
-      .todo-item_ready-mark {
+      .input-checkbox_target {
         cursor: pointer;
         position: absolute;
         opacity: 0;
@@ -57,7 +57,7 @@
         height: 100%;
         z-index: 1;
       }
-      .todo-item_ready-mark-icon {
+      .input-checkbox_visual {
         position: absolute;
         top:50%;
         left: 50%;

@@ -289,9 +289,9 @@ TodosListModel.prototype.getLeftItemsNumber = function () {
  */
 TodosListModel.prototype.onChange = function (handler, ctx) {
     this
-        .on('todoAdd', handler)
-        .on('todoRemoved', handler)
-        .on('todoChange', handler)
+        .on('todoAdd', handler, ctx)
+        .on('todoRemoved', handler, ctx)
+        .on('todoChange', handler, ctx)
         .on('modelReadyChanged', function (model) {
             if (model.get('isReady') && this._left !== 0) {
                 this._left -= 1;
@@ -879,7 +879,7 @@ function getTemplateRootNode(scriptId) {
 let templateEngine = {
     todoItem: function (data) {
         let root = getTemplateRootNode('itemTemplate');
-        let readyMark = root.querySelector('.todo-item_ready-mark');
+        let readyMark = root.querySelector('.input-checkbox_target');
         let remove = root.querySelector('.todo-item_close');
         let text = root.querySelector('.todo-item_text');
 
@@ -921,7 +921,7 @@ function TodosActionbar(root) {
     this._root = root;
     this._counter = root.querySelector('.todo-actionbar_left-items');
     this._clearCompletedButton = root.querySelector('.todo-actionbar_clear-completed');
-    this._filters = new Filter(root.querySelector('.todo-actionbar_items-filters'));
+    this._filters = new Filter(root.querySelector('.filter-button'));
 
     this._filters.on('filterSpecified', this._onFilterSpecified, this);
 
@@ -993,7 +993,7 @@ const Eventable = __webpack_require__(1);
 function Filter(root) {
     this._initEventable();
 
-    this._filters = root.querySelectorAll('.todo-actionbar_items-filter');
+    this._filters = root.querySelectorAll('.filter-button_item');
     this._activeFilter = null;
 
     for (let i = 0; i < this._filters.length; i++) {

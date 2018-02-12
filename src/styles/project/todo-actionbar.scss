@@ -1,7 +1,6 @@
 @import "./../config/globals.scss";
 
 .todo-actionbar {
-  position: absolute;
   bottom: 0;
   width: 100%;
   min-height: 40px;
@@ -16,12 +15,12 @@
     padding-left: $p_todo-actionbar_items;
     color: $c-grey-filter-font;
   }
-  .todo-actionbar_items-filters {
+  .filter-button {
     flex:1;
     align-self: center;
     display: inline-block;
   }
-    .todo-actionbar_items-filter {
+    .filter-button_item {
       cursor: pointer;
       padding-left: $p_todo-actionbar_items;
       padding-right: $p_todo-actionbar_items;

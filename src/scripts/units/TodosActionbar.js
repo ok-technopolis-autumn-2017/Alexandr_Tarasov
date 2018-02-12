@@ -12,7 +12,7 @@ function TodosActionbar(root) {
     this._root = root;
     this._counter = root.querySelector('.todo-actionbar_left-items');
     this._clearCompletedButton = root.querySelector('.todo-actionbar_clear-completed');
-    this._filters = new Filter(root.querySelector('.todo-actionbar_items-filters'));
+    this._filters = new Filter(root.querySelector('.filter-button'));
 
     this._filters.on('filterSpecified', this._onFilterSpecified, this);
 
